@@ -25,7 +25,6 @@ logger.add(
 
 # ======================
 # 核心 fixture：appium_driver
-# 题目 3a 强制要求：session 级别
 # ======================
 @pytest.fixture(scope="session", autouse=False)
 def appium_driver():
@@ -61,10 +60,6 @@ def appium_driver():
             logger.info("=" * 60)
             DriverFactory.quit_driver()
 
-
-# ======================
-# 可选：自动给所有测试用例带上 driver（不需要可删除）
-# ======================
 def pytest_runtest_setup(item):
     """测试用例前置钩子"""
     logger.info(f"\n🔹 开始执行测试: {item.name}")
