@@ -34,3 +34,5 @@
 5:
 在 utils/platform_utils.py里面实现了跨平台的submit
 
+6:
+在 debug_utils.py 实现：原生点击 → 日志 → TouchAction 降级
